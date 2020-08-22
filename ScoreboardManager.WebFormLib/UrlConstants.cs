@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScoreboardManager.WebFormLib
 {
-    public class Class1
+    public class UrlConstants
     {
     }
 }
