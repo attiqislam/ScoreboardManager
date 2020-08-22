@@ -33,6 +33,21 @@ namespace ScoreboardManager.Common.Extension
         }
 
         /// <summary>
+        /// Extension method to convert a string into integer.
+        /// Returns corresponding integer value of the string if successfully converted or returns Int.MinValue if conversion fails
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static int ToInt(this string input)
+        {
+            int output = 0;
+            bool result = int.TryParse(input, out output);
+            if (!result)
+                output = int.MinValue;
+            return output;
+        }
+
+        /// <summary>
         /// Method to convert a DataTable to a list of generic object.
         /// </summary>
         /// <typeparam name="T">Generic object</typeparam>

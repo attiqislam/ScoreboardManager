@@ -14,5 +14,14 @@ namespace ScoreboardManager.Common.Enums
             EntityFramework = 2,
             OracleDataAccessManager = 3
         }
+
+        public enum NotificationTypes
+        {
+            None = 1,
+            Notice = 2,
+            Info = 3,
+            Success = 4,
+            Error = 5
+        }
     }
 }
