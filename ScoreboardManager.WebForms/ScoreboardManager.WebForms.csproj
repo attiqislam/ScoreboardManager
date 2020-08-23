@@ -423,6 +423,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScoreboardManager.Common\ScoreboardManager.Common.csproj">
+      <Project>{30392b6c-125f-4137-b150-a901ab85e387}</Project>
+      <Name>ScoreboardManager.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ScoreboardManager.ServiceFacade\ScoreboardManager.ServiceFacade.csproj">
+      <Project>{92c4f73f-d3eb-4b25-972f-8b490add45af}</Project>
+      <Name>ScoreboardManager.ServiceFacade</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
