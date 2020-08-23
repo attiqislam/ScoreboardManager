@@ -53,10 +53,10 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">Add Player</a></li>
-                        <li><a runat="server" href="~/About">Player List</a></li>
-                        <li><a runat="server" href="~/About">Add Match</a></li>
-                        <li><a runat="server" href="~/About">Match List</a></li>
+                        <li><a runat="server" href="~/AdminPages/PlayerAdd.aspx">Add Player</a></li>
+                        <li><a runat="server" href="~/AdminPages/PlayerList.aspx">Player List</a></li>
+                        <li><a runat="server" href="~/AdminPages/MatchAdd.aspx">Add Match</a></li>
+                        <li><a runat="server" href="~/AdminPages/MatchList.aspx">Match List</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
