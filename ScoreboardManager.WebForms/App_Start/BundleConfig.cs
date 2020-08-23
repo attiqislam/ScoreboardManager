@@ -33,6 +33,11 @@ namespace ScoreboardManager.WebForms
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/Resources/PNotify/JS").Include(
+               "~/Resources/node_modules/pnotify/dist/iife/PNotify.js",
+               "~/Resources/node_modules/pnotify/dist/iife/PNotifyButtons.js"
+               ));
         }
     }
 }

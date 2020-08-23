@@ -112,6 +112,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AdminPages\MatchAdd.aspx" />
+    <Content Include="AdminPages\MatchList.aspx" />
+    <Content Include="AdminPages\PlayerAdd.aspx" />
+    <Content Include="AdminPages\PlayerList.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -130,9 +134,171 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotify.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyAnimate.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyButtons.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyCallbacks.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyCompat.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyConfirm.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyDesktop.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyHistory.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyMobile.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyNonBlock.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyReference.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyStyleMaterial.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotify.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyAnimate.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyButtons.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyCallbacks.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyCompat.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyConfirm.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyDesktop.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyHistory.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyMobile.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyNonBlock.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyReference.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyStyleMaterial.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotify.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyAnimate.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyButtons.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyCallbacks.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyCompat.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyConfirm.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyDesktop.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyHistory.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyMobile.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyNonBlock.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyReference.js.map" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyStyleMaterial.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotify.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyAnimate.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyButtons.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyCallbacks.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyConfirm.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyDesktop.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyHistory.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyMobile.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyNonBlock.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyReference.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyStyleMaterial.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotify.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyAnimate.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyButtons.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyCallbacks.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyCompat.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyConfirm.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyDesktop.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyHistory.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyMobile.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyNonBlock.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyReference.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyStyleMaterial.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotify.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyAnimate.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyButtons.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyCallbacks.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyCompat.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyConfirm.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyDesktop.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyHistory.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyMobile.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyNonBlock.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyReference.js.map" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyStyleMaterial.js.map" />
+    <Content Include="Resources\node_modules\pnotify\LICENSE" />
+    <Content Include="Resources\node_modules\pnotify\package.json" />
+    <Content Include="Resources\node_modules\pnotify\README.md" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotify.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyAnimate.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyButtons.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyCallbacks.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyCompat.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyConfirm.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyDesktop.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyHistory.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyMobile.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyNonBlock.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyReference.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyStyleMaterial.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotify.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyAnimate.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyButtons.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyCallbacks.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyCompat.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyConfirm.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyDesktop.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyHistory.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyMobile.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyNonBlock.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyReference.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\iife\PNotifyStyleMaterial.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\PNotifyBrightTheme.css" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotify.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyAnimate.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyButtons.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyCallbacks.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyCompat.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyConfirm.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyDesktop.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyHistory.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyMobile.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyNonBlock.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyReference.js" />
+    <Content Include="Resources\node_modules\pnotify\dist\umd\PNotifyStyleMaterial.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotify.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyAnimate.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyButtons.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyCallbacks.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyCompat.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyConfirm.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyDesktop.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyHistory.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyMobile.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyNonBlock.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyReference.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\es\PNotifyStyleMaterial.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotify.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyAnimate.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyButtons.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyCallbacks.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyCompat.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyConfirm.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyDesktop.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyHistory.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyMobile.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyNonBlock.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyReference.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\iife\PNotifyStyleMaterial.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotify.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyAnimate.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyButtons.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyCallbacks.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyCompat.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyConfirm.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyDesktop.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyHistory.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyMobile.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyNonBlock.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyReference.js" />
+    <Content Include="Resources\node_modules\pnotify\lib\umd\PNotifyStyleMaterial.js" />
+    <Content Include="Resources\node_modules\pnotify\make.js" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotify.html" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotifyAnimate.html" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotifyBrightTheme.css" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotifyButtons.html" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotifyCallbacks.html" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotifyCompat.js" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotifyConfirm.html" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotifyDesktop.html" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotifyHistory.html" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotifyMobile.html" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotifyNonBlock.html" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotifyReference.html" />
+    <Content Include="Resources\node_modules\pnotify\src\PNotifyStyleMaterial.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\DialogUtils.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -166,6 +332,34 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPages\MatchAdd.aspx.cs">
+      <DependentUpon>MatchAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\MatchAdd.aspx.designer.cs">
+      <DependentUpon>MatchAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\MatchList.aspx.cs">
+      <DependentUpon>MatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\MatchList.aspx.designer.cs">
+      <DependentUpon>MatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\PlayerAdd.aspx.cs">
+      <DependentUpon>PlayerAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\PlayerAdd.aspx.designer.cs">
+      <DependentUpon>PlayerAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\PlayerList.aspx.cs">
+      <DependentUpon>PlayerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\PlayerList.aspx.designer.cs">
+      <DependentUpon>PlayerList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>

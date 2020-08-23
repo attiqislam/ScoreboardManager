@@ -79,7 +79,7 @@ IF NOT EXISTS(SELECT * FROM Matchs WHERE MatchName = 'Test Match 5')
 		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(2,1,0);
 		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(2,2,2);
 		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(2,3,5);
-		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(2,4,1);
+		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(2,4,2);
 
 		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(3,1,1);
 		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(3,2,4);
@@ -88,13 +88,13 @@ IF NOT EXISTS(SELECT * FROM Matchs WHERE MatchName = 'Test Match 5')
 
 		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(4,1,2);
 		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(4,2,3);
-		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(4,3,1);
+		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(4,3,2);
 		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(4,4,3);
 
-		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(5,1,3);
+		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(5,1,2);
 		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(5,2,2);
 		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(5,3,1);
-		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(5,4,3);
+		INSERT INTO Points(PlayerID,MatchID,Point) VALUES(5,4,1);
 
 
 -------------------------- END: Points -------------------------------------------

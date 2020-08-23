@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ScoreboardManager.WebForms {
+namespace ScoreboardManager.WebForms.AdminPages {
     
     
-    public partial class _Default {
+    public partial class MatchList {
     }
 }
