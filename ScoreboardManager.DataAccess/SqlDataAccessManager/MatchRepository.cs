@@ -53,8 +53,9 @@ namespace ScoreboardManager.DataAccess.SqlDataAccessManager
 
             using (SqlConnection sqlConnection = new SqlConnection(base.ConnectionString))
             {
-                SqlCommand sqlCommand = new SqlCommand("MatchsInsert", sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand("MatchsUpdate", sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@MatchID", matchModel.MatchID);
                 sqlCommand.Parameters.AddWithValue("@MatchName", matchModel.MatchName);
                 sqlCommand.Parameters.AddWithValue("@MatchVenue", matchModel.MatchVenue);
                 sqlCommand.Parameters.AddWithValue("@MatchDateTime", matchModel.MatchDateTime);
@@ -77,7 +78,28 @@ namespace ScoreboardManager.DataAccess.SqlDataAccessManager
         /// <returns></returns>
         public MatchViewModel MatchsGet(int matchId)
         {
-            throw new NotImplementedException();
+            MatchViewModel result = new MatchViewModel();
+
+            using (SqlConnection sqlConnection = new SqlConnection(base.ConnectionString))
+            {
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("MatchsGet", sqlConnection);
+                sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@MatchID", matchId);
+
+                using (sqlDataAdapter)
+                {
+                    DataTable dataTable = new DataTable();
+                    sqlConnection.Open();
+                    sqlDataAdapter.Fill(dataTable);
+
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        result = dataTable.ToList<MatchViewModel>().FirstOrDefault(m => m.MatchID == matchId);
+                    }
+                }
+            }
+
+            return result;
         }
 
         /// <summary>

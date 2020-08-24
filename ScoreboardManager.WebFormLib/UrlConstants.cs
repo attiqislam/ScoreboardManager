@@ -11,6 +11,7 @@ namespace ScoreboardManager.WebFormLib
         #region List Pages' URLs
 
         public const string PLAYER_LIST_PAGE_URL = "/AdminPages/PlayerList.aspx";
+        public const string MATCH_LIST_PAGE_URL = "/AdminPages/MatchList.aspx";
 
         #endregion
     }

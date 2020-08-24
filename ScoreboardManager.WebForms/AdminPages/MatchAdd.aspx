@@ -30,8 +30,8 @@
 
                         <div class="form-group">
                             <asp:Label runat="server" Text="Match Date Time" AssociatedControlID="txtMatchDateTime" CssClass="col-md-2 control-label"></asp:Label>
-                            <div class="col-md-8">
-                                <asp:TextBox ID="txtMatchDateTime" runat="server" CssClass="form-control"></asp:TextBox>
+                            <div class="col-md-8 date select-date">
+                                <asp:TextBox ID="txtMatchDateTime" runat="server" CssClass="form-control datetimePicker"></asp:TextBox>
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtMatchDateTime" CssClass="" ErrorMessage="Match Date Time is required." ForeColor="Red" ValidationGroup="Match"></asp:RequiredFieldValidator>
                             </div>
                         </div>
@@ -57,6 +57,9 @@
                 </div>
             </div>
         </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="lbtnSave" EventName="Click" />
+        </Triggers>
     </asp:UpdatePanel>
 </asp:Content>
 <asp:Content ID="ctnScript" runat="server" ContentPlaceHolderID="ScriptContainer">

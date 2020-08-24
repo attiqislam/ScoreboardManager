@@ -134,6 +134,12 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Resources\DataTimePicker\bootstrap-datetimepicker-standalone.css" />
+    <Content Include="Resources\DataTimePicker\bootstrap-datetimepicker.css" />
+    <Content Include="Resources\DataTimePicker\bootstrap-datetimepicker.js" />
+    <Content Include="Resources\DataTimePicker\bootstrap-datetimepicker.min.css" />
+    <Content Include="Resources\DataTimePicker\bootstrap-datetimepicker.min.js" />
+    <Content Include="Resources\DataTimePicker\moment-with-locales.js" />
     <Content Include="Resources\node_modules\pnotify\dist\es\PNotify.js.map" />
     <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyAnimate.js.map" />
     <Content Include="Resources\node_modules\pnotify\dist\es\PNotifyButtons.js.map" />
@@ -304,6 +310,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\pageLoad.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />

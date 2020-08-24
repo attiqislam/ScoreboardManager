@@ -243,6 +243,34 @@ BEGIN
 END
 GO
 
+IF (select count(*) from sys.all_objects where name = 'MatchsGet') = 0
+	BEGIN
+		EXEC ('CREATE PROCEDURE MatchsGet AS RETURN 0;'); 
+	END
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author		: Attiq-ul Islam
+-- Create date	: 24.08.2020
+-- Description	: SP to get record of a match.
+-- =============================================
+ALTER PROCEDURE MatchsGet
+	@MatchID int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	SELECT * FROM Matchs
+	WHERE MatchID = @MatchID
+END
+GO
+
 IF (select count(*) from sys.all_objects where name = 'MatchsGetAll') = 0
 	BEGIN
 		EXEC ('CREATE PROCEDURE MatchsGetAll AS RETURN 0;'); 
@@ -267,6 +295,7 @@ BEGIN
 	SET NOCOUNT ON;
 
 	SELECT * FROM Matchs
+	ORDER BY MatchDateTime ASC
 END
 GO
 

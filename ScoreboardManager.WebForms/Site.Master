@@ -14,10 +14,11 @@
 
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <webopt:BundleReference runat="server" Path="~/Resources/PNotify/css" />
+    <webopt:BundleReference runat="server" Path="~/Resources/Bootstrap-DataTimePicker/css" />
+
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <asp:ContentPlaceHolder ID="cphHead" runat="server">
-
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -77,8 +78,11 @@
     </form>
 
     <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/Scripts/PageLoad/JS") %>
         <%: Scripts.Render("~/bundles/Resources/PNotify/JS") %>
         <%: Scripts.Render("~/bundles/Scripts/Utilities/JS") %>
+        <%: Scripts.Render("~/bundles/Resources/moment/js") %>
+        <%: Scripts.Render("~/bundles/Resources/bootstrap-datetimepicker/js") %>
     </asp:PlaceHolder>
 
     <%// DO NOT PUT ANY SCRIPTS INSIDE THE SCRIPTCONTAINER AS IT IS OVERWRITTEN IN PAGE LEVEL %>

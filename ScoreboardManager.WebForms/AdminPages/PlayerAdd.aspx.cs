@@ -125,9 +125,10 @@ namespace ScoreboardManager.WebForms.AdminPages
                 {
                     playerModel.PlayerID = base.RecordID;
 
-                    bool isPlayerInsertSuccessful = facade.PlayersUpdate(out message, playerModel);
-                    if (isPlayerInsertSuccessful)
+                    bool isPlayerUpdateSuccessful = facade.PlayersUpdate(out message, playerModel);
+                    if (isPlayerUpdateSuccessful)
                     {
+                        //TODO : Pass a simple but specific message to the users.
                         message = OperationMessages.OPERATION_SUCCESSFUL;
                         result = true;
                     }
@@ -138,6 +139,7 @@ namespace ScoreboardManager.WebForms.AdminPages
 
                     if (playerId > 0)
                     {
+                        //TODO : Pass a simple but specific message to the users.
                         message = OperationMessages.OPERATION_SUCCESSFUL;
                         result = true;
                     }

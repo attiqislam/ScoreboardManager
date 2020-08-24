@@ -34,6 +34,10 @@ namespace ScoreboardManager.WebForms
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/Scripts/PageLoad/JS").Include(
+             "~/Scripts/pageLoad.js"
+             ));
+
             bundles.Add(new ScriptBundle("~/bundles/Resources/PNotify/JS").Include(
                "~/Resources/node_modules/pnotify/dist/iife/PNotify.js",
                "~/Resources/node_modules/pnotify/dist/iife/PNotifyButtons.js"
@@ -42,6 +46,14 @@ namespace ScoreboardManager.WebForms
             bundles.Add(new ScriptBundle("~/bundles/Scripts/Utilities/JS").Include(
                   "~/Scripts/DialogUtils.js"
                 ));
+
+            bundles.Add(new ScriptBundle("~/bundles/Resources/moment/js").Include(
+              "~/Resources/DataTimePicker/moment-with-locales.js"
+              ));
+
+            bundles.Add(new ScriptBundle("~/bundles/Resources/bootstrap-datetimepicker/js").Include(
+               "~/Resources/DataTimePicker/bootstrap-datetimepicker.js"
+               ));
         }
     }
 }
