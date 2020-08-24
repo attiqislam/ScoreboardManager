@@ -79,6 +79,35 @@ BEGIN
 END
 GO
 
+IF (select count(*) from sys.all_objects where name = 'PlayersGet') = 0
+	BEGIN
+		EXEC ('CREATE PROCEDURE PlayersGet AS RETURN 0;'); 
+	END
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author		: Attiq-ul Islam
+-- Create date	: 24.08.2020
+-- Description	: SP to get record of a player.
+-- =============================================
+ALTER PROCEDURE PlayersGet
+	@PlayerID int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	SELECT * FROM Players
+	WHERE PlayerID = @PlayerID
+    
+END
+GO
+
 IF (select count(*) from sys.all_objects where name = 'PlayersGetAll') = 0
 	BEGIN
 		EXEC ('CREATE PROCEDURE PlayersGetAll AS RETURN 0;'); 

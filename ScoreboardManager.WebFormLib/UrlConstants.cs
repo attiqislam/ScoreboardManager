@@ -8,5 +8,10 @@ namespace ScoreboardManager.WebFormLib
 {
     public class UrlConstants
     {
+        #region List Pages' URLs
+
+        public const string PLAYER_LIST_PAGE_URL = "/AdminPages/PlayerList.aspx";
+
+        #endregion
     }
 }

@@ -78,7 +78,28 @@ namespace ScoreboardManager.DataAccess.SqlDataAccessManager
         /// <returns></returns>
         public PlayerViewModel PlayersGet(int playerId)
         {
-            throw new NotImplementedException();
+            PlayerViewModel result = new PlayerViewModel();
+
+            using (SqlConnection sqlConnection = new SqlConnection(base.ConnectionString))
+            {
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("PlayersGet", sqlConnection);
+                sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@PlayerID", playerId);
+
+                using (sqlDataAdapter)
+                {
+                    DataTable dataTable = new DataTable();
+                    sqlConnection.Open();
+                    sqlDataAdapter.Fill(dataTable);
+
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        result = dataTable.ToList<PlayerViewModel>().FirstOrDefault(p => p.PlayerID == playerId);
+                    }
+                }
+            }
+
+            return result;
         }
 
         /// <summary>

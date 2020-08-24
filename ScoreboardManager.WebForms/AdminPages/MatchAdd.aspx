@@ -46,7 +46,7 @@
 					                    <span class="glyphicon glyphicon-file"></span> Reset 
                                 </asp:LinkButton>
 
-                                <asp:LinkButton ID="lbtnDelete" runat="server" CssClass="btn btn-default" OnClick="lbtnDelete_Click" CausesValidation="false" ToolTip="Delete" data-toggle="tooltip">
+                                <asp:LinkButton ID="lbtnDelete" runat="server" CssClass="btn btn-danger" OnClick="lbtnDelete_Click" CausesValidation="false" ToolTip="Delete" data-toggle="tooltip">
 					                     <span class="glyphicon glyphicon-trash"></span> Delete 
                                 </asp:LinkButton>
 
