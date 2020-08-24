@@ -16,7 +16,9 @@
     <webopt:BundleReference runat="server" Path="~/Resources/PNotify/css" />
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
 
+    </asp:ContentPlaceHolder>
 </head>
 <body>
     <form runat="server">
