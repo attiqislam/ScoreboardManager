@@ -47,8 +47,7 @@
                 "columns": [
                     { "data": "MatchName" },
                     { "data": "MatchVenue" },
-                    { "data": "MatchDateTime" },
-                    { "data": "Action" }
+                    { "data": "MatchDateTime" }
                 ],
                 "columnDefs": [{
                     "targets": 3,
