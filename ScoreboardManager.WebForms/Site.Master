@@ -6,15 +6,20 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - Scoreboard Manager</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Resources/PNotify/css" />
+    <webopt:BundleReference runat="server" Path="~/Resources/Bootstrap-DataTimePicker/css" />
 
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
     <form runat="server">
@@ -51,6 +56,10 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/AdminPages/PlayerAdd.aspx">Add Player</a></li>
+                        <li><a runat="server" href="~/AdminPages/PlayerList.aspx">Player List</a></li>
+                        <li><a runat="server" href="~/AdminPages/MatchAdd.aspx">Add Match</a></li>
+                        <li><a runat="server" href="~/AdminPages/MatchList.aspx">Match List</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
@@ -62,10 +71,21 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - <a href='https://www.linkedin.com/in/attiq-ul-islam-31846034' target="_blank">Attiq-ul Islam</a></p>
             </footer>
         </div>
 
     </form>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/Scripts/PageLoad/JS") %>
+        <%: Scripts.Render("~/bundles/Resources/PNotify/JS") %>
+        <%: Scripts.Render("~/bundles/Scripts/Utilities/JS") %>
+        <%: Scripts.Render("~/bundles/Resources/moment/js") %>
+        <%: Scripts.Render("~/bundles/Resources/bootstrap-datetimepicker/js") %>
+    </asp:PlaceHolder>
+
+    <%// DO NOT PUT ANY SCRIPTS INSIDE THE SCRIPTCONTAINER AS IT IS OVERWRITTEN IN PAGE LEVEL %>
+    <asp:ContentPlaceHolder runat="server" ID="ScriptContainer"></asp:ContentPlaceHolder>
 </body>
 </html>

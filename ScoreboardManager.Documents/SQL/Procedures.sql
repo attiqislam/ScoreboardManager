@@ -79,6 +79,35 @@ BEGIN
 END
 GO
 
+IF (select count(*) from sys.all_objects where name = 'PlayersGet') = 0
+	BEGIN
+		EXEC ('CREATE PROCEDURE PlayersGet AS RETURN 0;'); 
+	END
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author		: Attiq-ul Islam
+-- Create date	: 24.08.2020
+-- Description	: SP to get record of a player.
+-- =============================================
+ALTER PROCEDURE PlayersGet
+	@PlayerID int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	SELECT * FROM Players
+	WHERE PlayerID = @PlayerID
+    
+END
+GO
+
 IF (select count(*) from sys.all_objects where name = 'PlayersGetAll') = 0
 	BEGIN
 		EXEC ('CREATE PROCEDURE PlayersGetAll AS RETURN 0;'); 
@@ -214,6 +243,34 @@ BEGIN
 END
 GO
 
+IF (select count(*) from sys.all_objects where name = 'MatchsGet') = 0
+	BEGIN
+		EXEC ('CREATE PROCEDURE MatchsGet AS RETURN 0;'); 
+	END
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author		: Attiq-ul Islam
+-- Create date	: 24.08.2020
+-- Description	: SP to get record of a match.
+-- =============================================
+ALTER PROCEDURE MatchsGet
+	@MatchID int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	SELECT * FROM Matchs
+	WHERE MatchID = @MatchID
+END
+GO
+
 IF (select count(*) from sys.all_objects where name = 'MatchsGetAll') = 0
 	BEGIN
 		EXEC ('CREATE PROCEDURE MatchsGetAll AS RETURN 0;'); 
@@ -238,6 +295,7 @@ BEGIN
 	SET NOCOUNT ON;
 
 	SELECT * FROM Matchs
+	ORDER BY MatchDateTime ASC
 END
 GO
 
@@ -380,34 +438,36 @@ BEGIN
 END
 GO
 
---IF (select count(*) from sys.all_objects where name = 'IsPointExist') = 0
---	BEGIN
---		EXEC ('CREATE PROCEDURE IsPointExist AS RETURN 0;'); 
---	END
---GO
+IF (select count(*) from sys.all_objects where name = 'IsPointExist') = 0
+	BEGIN
+		EXEC ('CREATE PROCEDURE IsPointExist AS RETURN 0;'); 
+	END
+GO
 
---SET ANSI_NULLS ON
---GO
---SET QUOTED_IDENTIFIER ON
---GO
----- =============================================
----- Author		: Attiq-ul Islam
----- Create date	: 18.08.2020
----- Description	: SP to check whether Point of a player is exist in the table.
----- =============================================
---ALTER PROCEDURE IsPointExist
---	@PlayerID int
---AS
---BEGIN
---	-- SET NOCOUNT ON added to prevent extra result sets from
---	-- interfering with SELECT statements.
---	SET NOCOUNT ON;
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author		: Attiq-ul Islam
+-- Create date	: 18.08.2020
+-- Description	: SP to check whether Point of a player is exist in the table.
+-- =============================================
+ALTER PROCEDURE IsPointExist
+	@PlayerID int,
+	@MatchID int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
 
---	SELECT * FROM Points
---	WHERE PlayerID = @PlayerID
+	SELECT * FROM Points
+	WHERE PlayerID = @PlayerID
+	AND	  MatchID = @MatchID
     
---END
---GO
+END
+GO
 -------------------------- END: Points -------------------------------------------
 
 

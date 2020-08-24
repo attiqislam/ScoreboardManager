@@ -110,15 +110,38 @@ namespace ScoreboardManager.DataAccess.SqlDataAccessManager
             return result;
         }
 
-        ///// <summary>
-        ///// Method to check whether Point of a player is exist in the table.
-        ///// </summary>
-        ///// <param name="playerId"></param>
-        ///// <returns></returns>
-        //public bool IsPointExist(int playerId)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        /// <summary>
+        /// Method to check whether Point of a player is exist in the table.
+        /// </summary>
+        /// <param name="playerId"></param>
+        /// <param name="matchId"></param>
+        /// <returns></returns>
+        public bool IsPointExist(int playerId, int matchId)
+        {
+           bool result = false;
+
+            using (SqlConnection sqlConnection = new SqlConnection(base.ConnectionString))
+            {
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("IsPointExist", sqlConnection);
+                sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@PlayerID", playerId);
+                sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@MatchID", matchId);
+
+                using (sqlDataAdapter)
+                {
+                    DataTable dataTable = new DataTable();
+                    sqlConnection.Open();
+                    sqlDataAdapter.Fill(dataTable);
+
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        result = true;
+                    }
+                }
+            }
+
+            return result;
+        }
 
         #endregion
     }

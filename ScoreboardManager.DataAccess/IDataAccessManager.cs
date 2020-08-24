@@ -115,12 +115,13 @@ namespace ScoreboardManager.DataAccess
         /// <returns></returns>
         IList<PointViewModel> PointsGetAll();
 
-        ///// <summary>
-        ///// Method to check whether Point of a player is exist in the table.
-        ///// </summary>
-        ///// <param name="playerId"></param>
-        ///// <returns></returns>
-        //bool IsPointExist(int playerId);
+        /// <summary>
+        /// Method to check whether Point of a player is exist in the table.
+        /// </summary>
+        /// <param name="playerId"></param>
+        /// <param name="matchId"></param>
+        /// <returns></returns>
+        bool IsPointExist(int playerId, int matchId);
 
         #endregion
     }

@@ -157,15 +157,16 @@ namespace ScoreboardManager.DataAccess.EFDataAccessManager
             throw new NotImplementedException();
         }
 
-        ///// <summary>
-        ///// Method to check whether Point of a player is exist in the table.
-        ///// </summary>
-        ///// <param name="playerId"></param>
-        ///// <returns></returns>
-        //public bool IsPointExist(int playerId)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        /// <summary>
+        /// Method to check whether Point of a player is exist in the table.
+        /// </summary>
+        /// <param name="playerId"></param>
+        /// <param name="matchId"></param>
+        /// <returns></returns>
+        public bool IsPointExist(int playerId, int matchId)
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion
     }

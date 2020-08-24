@@ -117,16 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CONNECTION_STRING_NOT_FOUND" xml:space="preserve">
-    <value>Connection string was not found!</value>
-  </data>
-  <data name="CRITICAL_ERROR" xml:space="preserve">
-    <value>A critical error happened!</value>
-  </data>
-  <data name="POINT_IS_EXISTING" xml:space="preserve">
-    <value>Point of the player for the match is existing in the database!</value>
-  </data>
-  <data name="REQUIRED_FILD_IS_MISSING" xml:space="preserve">
-    <value>Required field is missing!</value>
+  <data name="OPERATION_SUCCESSFUL" xml:space="preserve">
+    <value>Operation successful!</value>
   </data>
 </root>

@@ -9,6 +9,8 @@ namespace ScoreboardManager.Common.ViewModels
 {
     public class PointViewModel : PointModel
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public int TotalPoints { get; set; }
     }
 }
