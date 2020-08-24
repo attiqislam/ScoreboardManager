@@ -1,10 +1,10 @@
 ﻿
 -------------------------- START: Players -------------------------------------------
 
-IF NOT EXISTS(SELECT * FROM Players WHERE Email = 'attiq.islam@test.com')
+IF NOT EXISTS(SELECT * FROM Players WHERE Email = 'edson.Pele@test.com')
 	BEGIN
 		INSERT INTO Players(FirstName,LastName,Email)
-			VALUES('Attiq','Islam','attiq.islam@test.com');
+			VALUES('Edson','Pele','edson.Pele@test.com');
 	END
 
 IF NOT EXISTS(SELECT * FROM Players WHERE Email = 'lionel.messi@test.com')

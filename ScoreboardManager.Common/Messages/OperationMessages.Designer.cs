@@ -22,14 +22,14 @@ namespace ScoreboardManager.Common.Messages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class ErrorMessages {
+    public class OperationMessages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ErrorMessages() {
+        internal OperationMessages() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ScoreboardManager.Common.Messages {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ScoreboardManager.Common.Messages.ErrorMessages", typeof(ErrorMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ScoreboardManager.Common.Messages.OperationMessages", typeof(OperationMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,38 +61,11 @@ namespace ScoreboardManager.Common.Messages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Connection string was not found!.
+        ///   Looks up a localized string similar to Operation successful!.
         /// </summary>
-        public static string CONNECTION_STRING_NOT_FOUND {
+        public static string OPERATION_SUCCESSFUL {
             get {
-                return ResourceManager.GetString("CONNECTION_STRING_NOT_FOUND", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A critical error happened!.
-        /// </summary>
-        public static string CRITICAL_ERROR {
-            get {
-                return ResourceManager.GetString("CRITICAL_ERROR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Point of the player for the match is existing in the database!.
-        /// </summary>
-        public static string POINT_IS_EXISTING {
-            get {
-                return ResourceManager.GetString("POINT_IS_EXISTING", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Required field is missing!.
-        /// </summary>
-        public static string REQUIRED_FILD_IS_MISSING {
-            get {
-                return ResourceManager.GetString("REQUIRED_FILD_IS_MISSING", resourceCulture);
+                return ResourceManager.GetString("OPERATION_SUCCESSFUL", resourceCulture);
             }
         }
     }

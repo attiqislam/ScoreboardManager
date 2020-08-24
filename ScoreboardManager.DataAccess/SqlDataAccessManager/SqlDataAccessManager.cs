@@ -183,15 +183,16 @@ namespace ScoreboardManager.DataAccess.SqlDataAccessManager
             return this.Repository.PointsGetAll();
         }
 
-        ///// <summary>
-        ///// Method to check whether Point of a player is exist in the table.
-        ///// </summary>
-        ///// <param name="playerId"></param>
-        ///// <returns></returns>
-        //public bool IsPointExist(int playerId)
-        //{
-        //    return this.Repository.IsPointExist(playerId);
-        //}
+        /// <summary>
+        /// Method to check whether Point of a player is exist in the table.
+        /// </summary>
+        /// <param name="playerId"></param>
+        /// <param name="matchId"></param>
+        /// <returns></returns>
+        public bool IsPointExist(int playerId, int matchId)
+        {
+            return this.Repository.IsPointExist(playerId, matchId);
+        }
 
         #endregion
 

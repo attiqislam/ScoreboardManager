@@ -116,27 +116,28 @@ namespace ScoreboardManager.Services
             return result;
         }
 
-        ///// <summary>
-        ///// Method to check whether Point of a player is exist in the table.
-        ///// </summary>
-        ///// <param name="errorMessage"></param>
-        ///// <param name="playerId"></param>
-        ///// <returns></returns>
-        //public bool IsPointExist(out string errorMessage, int playerId)
-        //{
-        //    errorMessage = string.Empty;
-        //    bool result = false;
-        //    try
-        //    {
-        //        result = this.DataAccessManager.IsPointExist(playerId);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        //TODO : Log the exception somewhere, and pass a simple but specific error message to the users.
-        //        errorMessage = ErrorMessages.CRITICAL_ERROR;
-        //    }
-        //    return result;
-        //}
+        /// <summary>
+        /// Method to check whether Point of a player is exist in the table.
+        /// </summary>
+        /// <param name="errorMessage"></param>
+        /// <param name="playerId"></param>
+        /// <param name="matchId"></param>
+        /// <returns></returns>
+        public bool IsPointExist(out string errorMessage, int playerId, int matchId)
+        {
+            errorMessage = string.Empty;
+            bool result = false;
+            try
+            {
+                result = this.DataAccessManager.IsPointExist(playerId, matchId);
+            }
+            catch (Exception ex)
+            {
+                //TODO : Log the exception somewhere, and pass a simple but specific error message to the users.
+                errorMessage = ErrorMessages.CRITICAL_ERROR;
+            }
+            return result;
+        }
 
         #endregion
     }

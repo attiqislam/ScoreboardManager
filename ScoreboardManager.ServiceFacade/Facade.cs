@@ -186,17 +186,18 @@ namespace ScoreboardManager.ServiceFacade
             return Pointservice.PointsGetAll(out errorMessage);
         }
 
-        ///// <summary>
-        ///// Method to check whether Point of a player is exist in the table.
-        ///// </summary>
-        ///// <param name="errorMessage"></param>
-        ///// <param name="playerId"></param>
-        ///// <returns></returns>
-        //public bool IsPointExist(out string errorMessage, int playerId)
-        //{
-        //    PointService Pointservice = new PointService();
-        //    return Pointservice.IsPointExist(out errorMessage, playerId);
-        //}
+        /// <summary>
+        /// Method to check whether Point of a player is exist in the table.
+        /// </summary>
+        /// <param name="errorMessage"></param>
+        /// <param name="playerId"></param>
+        /// <param name="matchId"></param>
+        /// <returns></returns>
+        public bool IsPointExist(out string errorMessage, int playerId, int matchId)
+        {
+            PointService Pointservice = new PointService();
+            return Pointservice.IsPointExist(out errorMessage, playerId, matchId);
+        }
 
         #endregion
     }

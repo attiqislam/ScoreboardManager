@@ -380,34 +380,36 @@ BEGIN
 END
 GO
 
---IF (select count(*) from sys.all_objects where name = 'IsPointExist') = 0
---	BEGIN
---		EXEC ('CREATE PROCEDURE IsPointExist AS RETURN 0;'); 
---	END
---GO
+IF (select count(*) from sys.all_objects where name = 'IsPointExist') = 0
+	BEGIN
+		EXEC ('CREATE PROCEDURE IsPointExist AS RETURN 0;'); 
+	END
+GO
 
---SET ANSI_NULLS ON
---GO
---SET QUOTED_IDENTIFIER ON
---GO
----- =============================================
----- Author		: Attiq-ul Islam
----- Create date	: 18.08.2020
----- Description	: SP to check whether Point of a player is exist in the table.
----- =============================================
---ALTER PROCEDURE IsPointExist
---	@PlayerID int
---AS
---BEGIN
---	-- SET NOCOUNT ON added to prevent extra result sets from
---	-- interfering with SELECT statements.
---	SET NOCOUNT ON;
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author		: Attiq-ul Islam
+-- Create date	: 18.08.2020
+-- Description	: SP to check whether Point of a player is exist in the table.
+-- =============================================
+ALTER PROCEDURE IsPointExist
+	@PlayerID int,
+	@MatchID int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
 
---	SELECT * FROM Points
---	WHERE PlayerID = @PlayerID
+	SELECT * FROM Points
+	WHERE PlayerID = @PlayerID
+	AND	  MatchID = @MatchID
     
---END
---GO
+END
+GO
 -------------------------- END: Points -------------------------------------------
 
 

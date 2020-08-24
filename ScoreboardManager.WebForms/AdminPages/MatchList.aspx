@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MatchList.aspx.cs" Inherits="ScoreboardManager.WebForms.AdminPages.MatchList" MasterPageFile="~/Site.Master" %>
+﻿<%@ Page Title="Match List" Language="C#" AutoEventWireup="true" CodeBehind="MatchList.aspx.cs" Inherits="ScoreboardManager.WebForms.AdminPages.MatchList" MasterPageFile="~/Site.Master" %>
 
 <asp:Content ID="ctnMain" runat="server" ContentPlaceHolderID="MainContent">
 </asp:Content>

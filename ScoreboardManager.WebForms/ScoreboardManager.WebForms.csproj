@@ -432,6 +432,10 @@
       <Project>{92c4f73f-d3eb-4b25-972f-8b490add45af}</Project>
       <Name>ScoreboardManager.ServiceFacade</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ScoreboardManager.WebFormLib\ScoreboardManager.WebFormLib.csproj">
+      <Project>{e2d7e58b-930a-4180-a147-bf95fb977eb7}</Project>
+      <Name>ScoreboardManager.WebFormLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

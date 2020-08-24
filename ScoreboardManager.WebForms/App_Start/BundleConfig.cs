@@ -38,6 +38,10 @@ namespace ScoreboardManager.WebForms
                "~/Resources/node_modules/pnotify/dist/iife/PNotify.js",
                "~/Resources/node_modules/pnotify/dist/iife/PNotifyButtons.js"
                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/Scripts/Utilities/JS").Include(
+                  "~/Scripts/DialogUtils.js"
+                ));
         }
     }
 }

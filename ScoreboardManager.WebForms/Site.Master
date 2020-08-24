@@ -76,6 +76,7 @@
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/Resources/PNotify/JS") %>
+        <%: Scripts.Render("~/bundles/Scripts/Utilities/JS") %>
     </asp:PlaceHolder>
 
     <%// DO NOT PUT ANY SCRIPTS INSIDE THE SCRIPTCONTAINER AS IT IS OVERWRITTEN IN PAGE LEVEL %>
