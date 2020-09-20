@@ -12,7 +12,9 @@
                 <h4>List of all matchs</h4>
                 <hr />
             </div>
-            <table id="matchs" class="display" style="width: 100%">
+            <table id="matchs" class="table table-responsive" style="width: 100%" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true"
+                data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                data-cookie-id-table="saveId" data-show-export="false" data-click-to-select="true" data-toolbar="#toolbar">
                 <thead>
                     <tr>
                         <th data-field="MatchName">Match Name</th>
@@ -21,7 +23,26 @@
                         <th data-field="Action">Edit</th>
                     </tr>
                 </thead>
-
+                <tbody>
+                    <asp:Repeater ID="rptMatchs" runat="server">
+                        <ItemTemplate>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lblMatchName" runat="server" Text='<%# Eval("MatchName") %>' />
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblMatchVenue" runat="server" Text='<%# Eval("MatchVenue") %>' />
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblMatchDateTime" runat="server" Text='<%# Eval("MatchDateTime") %>' />
+                                </td>
+                                <td class="td-align-center">
+                                    <a href="MatchAdd.aspx?rid=<%#Eval("MatchID") %>">Edit</a>
+                                </td>
+                            </tr>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </tbody>
             </table>
         </div>
     </div>
@@ -30,34 +51,4 @@
 
 <asp:Content ID="ctnScript" runat="server" ContentPlaceHolderID="ScriptContainer">
     <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-            $('#matchs').DataTable({
-                "processing": true,
-                "ajax": {
-                    "url": "http://localhost:53530/Matchs/GetAll",
-                    "type": "POST",
-                    "dataType": 'json',
-                    "dataSrc": function (json) {
-                        return json;
-                    }
-                },
-                "columns": [
-                    { "data": "MatchName" },
-                    { "data": "MatchVenue" },
-                    { "data": "MatchDateTime" }
-                ],
-                "columnDefs": [{
-                    "targets": 3,
-                    "render": function (data, type, row, meta) {
-                        return '<a href="/AdminPages/MatchAdd?rid=' + row.MatchID + '">Edit</a>';
-                    }
-                }]
-            });
-        });
-
-    </script>
-
 </asp:Content>

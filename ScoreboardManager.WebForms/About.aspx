@@ -10,6 +10,6 @@
     </p>
     <p> This project is licensed under Apache License 2.0 and permitted for Commercial use, Modification, Distribution, and Private use</p>
     <p>
-        If you need any help, you can reach me through LinkedIn, I will try to answer your queries.
+        If you need any help, you can reach me through <a href='https://www.linkedin.com/in/attiq-ul-islam-31846034' target="_blank">LinkedIn</a>, I will try to answer your queries.
     </p>
 </asp:Content>
